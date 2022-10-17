@@ -72,17 +72,25 @@
     "test:module": "IMPORT_MAP_PATH=test/import-maps/dist/index.module.json npm run test-cmd",
     "test:src": "IMPORT_MAP_PATH=test/import-maps/src/index.json npm run test-cmd"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@arithmetic-type/uint32": "^2.0.0",
+    "@arithmetic-type/uint64": "^4.0.0",
+    "@array-like/copy": "^0.0.1",
+    "@failure-abstraction/error": "^6.0.1"
+  },
   "devDependencies": {
-    "@babel/core": "7.19.0",
-    "@babel/plugin-transform-destructuring": "7.18.13",
+    "@array-like/alloc": "0.0.1",
+    "@babel/core": "7.19.3",
+    "@babel/plugin-transform-destructuring": "7.19.4",
     "@babel/plugin-transform-for-of": "7.18.8",
-    "@babel/preset-env": "7.19.0",
+    "@babel/preset-env": "7.19.4",
+    "@codec-bytes/ascii": "3.0.0",
     "@commitlint/cli": "17.1.2",
     "@js-library/commitlint-config": "0.0.4",
     "@node-loader/babel": "2.0.1",
     "@node-loader/core": "2.0.0",
     "@node-loader/import-maps": "1.1.0",
+    "@set-theory/cartesian-product": "2.0.2",
     "ava": "4.3.3",
     "babel-plugin-transform-remove-console": "6.9.4",
     "babel-plugin-unassert": "3.2.0",
@@ -100,8 +108,8 @@
     "np": "7.6.2",
     "pinst": "3.0.0",
     "power-assert": "1.6.1",
-    "regenerator-runtime": "0.13.9",
-    "xo": "0.52.3"
+    "regenerator-runtime": "0.13.10",
+    "xo": "0.52.4"
   },
   "ava": {
     "files": [
@@ -229,6 +237,16 @@
           "doc/**"
         ],
         "env": "browser"
+      },
+      {
+        "files": [
+          "src/**"
+        ],
+        "rules": {
+          "unicorn/filename-case": "off",
+          "no-bitwise": "off",
+          "unicorn/prefer-math-trunc": "off"
+        }
       }
     ]
   }

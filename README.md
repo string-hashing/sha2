@@ -4,12 +4,16 @@
 SHA2 bytestring hashing for JavaScript.
 See [docs](https://string-hashing.github.io/sha2/index.html).
 
-> :building_construction: Caveat emptor! This is work in progress. Code may be
-> working. Documentation may be present. Coherence may be. Maybe.
-
-> :warning: Depending on your environment, the code may require
-> `regeneratorRuntime` to be defined, for instance by importing
-> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
+```js
+import * as ascii from '@codec-bytes/ascii';
+import * as base16 from '@codec-bytes/base16';
+import {sha512} from '@string-hashing/sha2';
+const string = 'The quick brown fox jumps over the lazy dog';
+const bytes = ascii.encode(string);
+const digest = sha512(bytes, bytes.length * 8, alloc(64));
+digest; // [0x07, 0xe5, 0x47, 0xd9, 0x58, 0x6f, 0x6a, 0x73, 0xf7, 0x3f, ...]
+base16.decode(digest); // '07E547D9586F6A73F73FBAC0435ED76951218FB7D0C8D788A309D785436B...'
+```
 
 [![License](https://img.shields.io/github/license/string-hashing/sha2.svg)](https://raw.githubusercontent.com/string-hashing/sha2/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@string-hashing/sha2.svg)](https://www.npmjs.org/package/@string-hashing/sha2)

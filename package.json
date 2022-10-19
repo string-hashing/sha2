@@ -1,7 +1,7 @@
 {
   "name": "@string-hashing/sha2",
   "description": "SHA2 bytestring hashing for JavaScript",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "AGPL-3.0",
   "author": "make-github-pseudonymous-again",
   "homepage": "https://string-hashing.github.io/sha2",

@@ -1,7 +1,8 @@
 import test from 'ava';
+
 import {alloc} from '@array-like/alloc';
-import {product} from '@set-theory/cartesian-product';
 import * as ascii from '@codec-bytes/ascii';
+import {product} from '@set-theory/cartesian-product';
 
 import * as hash from '#module';
 

@@ -100,7 +100,7 @@ export function sha512Cycle(state, w) {
 	let b = state[1];
 	let c = state[2];
 	let d = state[3];
-	let e = state[4]; // eslint-disable-line unicorn/prevent-abbreviations
+	let e = state[4];
 	let f = state[5];
 	let g = state[6];
 	let h = state[7];
